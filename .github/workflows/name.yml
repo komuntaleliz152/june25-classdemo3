@@ -1,6 +1,6 @@
 name: Marcus
 
-on: [pull-request]
+on: [pull-request, push]
 
 jobs:
   test:
