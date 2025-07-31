@@ -1,0 +1,21 @@
+name: Marcus
+
+on: [pull-request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14'
+      - name: install dependancies
+        run: npm install
+
+      - name: run test
+        run: npm test
